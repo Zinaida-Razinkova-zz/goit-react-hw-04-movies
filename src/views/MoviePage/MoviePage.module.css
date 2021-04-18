@@ -1,0 +1,19 @@
+.buttonSearch {
+  background-color: #2dbacb;
+  width: 80px;
+  height: 30px;
+  border: 0;
+  border-radius: 5px;
+
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.labelSearch {
+  border-radius: 3px;
+  margin-right: 25px;
+}
+
+.blockSearch {
+  padding-top: 25px;
+}

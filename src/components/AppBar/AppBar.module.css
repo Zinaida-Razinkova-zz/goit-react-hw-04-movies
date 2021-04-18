@@ -1,0 +1,23 @@
+body {
+  font: inherit;
+  color: #032541;
+}
+
+li {
+  list-style-type: none;
+}
+
+.appBar {
+  border-bottom: 1px solid #ececec;
+  background-color: #032541;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.navlink {
+  font-size: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 25px;
+}
