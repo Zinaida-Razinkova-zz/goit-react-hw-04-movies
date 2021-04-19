@@ -33,18 +33,18 @@ class MovieDetailsPage extends Component {
 
   goBackButton = () => {
     const { location, history } = this.props;
-    // console.log(location.state.from);
 
     // if (location.state && location.state.from) {
-    //   return history.push(location.state.from);
+    //   history.push(location.state.from);
+    //   return;
     // }
-    // history.push(routes.home);
+    // history.push(routes.movies);
 
     history.push(location?.state?.from || routes.home);
   };
 
   render() {
-    const { url } = this.props.match;
+    const { match, location } = this.props;
     return (
       <>
         <div className={styles.blockButtonGoBack}>
@@ -87,12 +87,25 @@ class MovieDetailsPage extends Component {
           <h3>Additional information</h3>
           <ul>
             <li>
-              <Link className={styles.titleReviewsCast} to={`${url}/cast`}>
+              <Link
+                className={styles.titleReviewsCast}
+                // to={`${url}/cast`}>
+                to={{
+                  pathname: `${match.url}/cast`,
+                  state: { ...location.state },
+                }}
+              >
                 Cast
               </Link>
             </li>
             <li>
-              <Link className={styles.titleReviewsCast} to={`${url}/reviews`}>
+              <Link
+                className={styles.titleReviewsCast}
+                to={{
+                  pathname: `${match.url}/reviews`,
+                  state: { ...location.state },
+                }}
+              >
                 Reviews
               </Link>
             </li>
